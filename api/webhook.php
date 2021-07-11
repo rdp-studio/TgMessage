@@ -9,4 +9,8 @@ if ($message === '/token') {
     $chat_id = $data['message']['chat']['id'];
     $bot->sendMessage(['text' => $bot->encryption($chat_id), 'chat_id' => $chat_id]);
 }
+if ($message === '/start') {
+    $chat_id = $data['message']['chat']['id'];
+    $bot->sendMessage(['text' => $bot->encryption($chat_id), 'chat_id' => $chat_id]);
+}
 echo json_encode(['code' => 200, 'message' => 'success']);
