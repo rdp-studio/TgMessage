@@ -11,6 +11,6 @@ if ($message === '/token') {
 }
 if ($message === '/start') {
     $chat_id = $data['message']['chat']['id'];
-    $bot->sendMessage(['text' => $bot->encryption($chat_id), 'chat_id' => $chat_id]);
+    $bot->sendMessage(['text' => '在这里查看机器人的文档：https://tgmessage.rdpstudio.top');
 }
 echo json_encode(['code' => 200, 'message' => 'success']);
